@@ -28,7 +28,7 @@ class MeanImputer(BaseEstimator, TransformerMixin):
 class RareLabelCategoricalEncoder(BaseEstimator, TransformerMixin):
     """Groups infrequent categories into a single string"""
 
-    def __init__(self, tol=0.05, variables):
+    def __init__(self, variables, tol=0.05):
 
         if not isinstance(variables, list):
             raise ValueError('variables should be a list')
